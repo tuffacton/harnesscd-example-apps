@@ -23,7 +23,7 @@ pipeline:
                     source:
                       type: Inline
                       spec:
-                        script: echo "Hello World from Git!"
+                        script: echo "Hello World from Git Again!"
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
