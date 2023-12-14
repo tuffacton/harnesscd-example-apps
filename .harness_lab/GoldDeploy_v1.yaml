@@ -42,5 +42,11 @@ template:
             type: StageRollback
     delegateSelectors:
       - kubernetes-delegate
+    variables:
+      - name: printme
+        type: String
+        description: ""
+        required: false
+        value: Hell, print me"
   identifier: GoldDeploy
   versionLabel: v1
