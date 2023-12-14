@@ -17,6 +17,20 @@ template:
       execution:
         steps:
           - step:
+              type: ShellScript
+              name: Print
+              identifier: Print
+              spec:
+                shell: Bash
+                onDelegate: true
+                source:
+                  type: Inline
+                  spec:
+                    script: echo "<+stage.variables.printme>"
+                environmentVariables: []
+                outputVariables: []
+              timeout: 10m
+          - step:
               name: Rollout Deployment
               identifier: rolloutDeployment
               type: K8sRollingDeploy
